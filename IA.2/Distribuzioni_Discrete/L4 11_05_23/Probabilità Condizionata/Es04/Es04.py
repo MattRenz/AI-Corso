@@ -13,37 +13,34 @@ fileCsv = input("\n Inserisci path completo file CSV: ")
 header_si_no = input("\n La prima riga è l'header(Si/No)?")
 separator = input("\n Inserisci il separatore:")
 
+# inizializzo la lista delle etichette che leggo dal CSV se ci sono oppure le inserisce l'utente
 
 labels = []
 f = pathFIle
 
 header_flag_ok = 0
 
-# header si
 if (header_si_no.lower() == 'si'):
     df = read_csv(f, sep=separator)
     labels = df.columns.tolist()
     header_flag_ok = 1
 
-# header no
 if (header_si_no.lower() == 'no'):
     df = read_csv(f, header=None, sep=separator)
     header_flag_ok = 1
     iCounter = 0
     num_cols = len(df.columns)
-    
-    # creazione header
+
     while iCounter < num_cols:
         sStringToPrint = "Inserisci label " + str(iCounter + 1)
         labels.append(input(sStringToPrint))
         iCounter = iCounter + 1
-        
-# controllo header
+
 if (header_flag_ok != 1):
     print("header nel file non letto correttamente")
     sys.exit(0)
 
-print(df.mean())
+
 
 for i in range(1, len(df.columns)):
 
@@ -53,6 +50,10 @@ for i in range(1, len(df.columns)):
         print("\n La media della colonna " + str(i) + "Vale: " + str(mean))
 
     
+
+
+
+
 
 #    Id  SepalLengthCm  SepalWidthCm  PetalLengthCm  PetalWidthCm      Species
 # 0   1            5.1           3.5            1.4           0.2  Iris-setosa
