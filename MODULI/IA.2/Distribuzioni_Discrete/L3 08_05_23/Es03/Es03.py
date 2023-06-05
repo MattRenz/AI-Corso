@@ -25,7 +25,7 @@ def PorceduraEstraiUrna(lurna):
 
 
 
-numProva = 10000007
+numProva = 1000000
 
 urna1 = [450,550] 
 

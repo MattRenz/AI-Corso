@@ -30,7 +30,6 @@ for i in range(numProva):
 
         succ1 +=1
 
-
     if estrazione >= 3.8:
         succ2 +=1
 
