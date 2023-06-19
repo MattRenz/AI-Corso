@@ -1,6 +1,24 @@
 
-import FUNZIONI.ProceduraEstraiUrna as ProceduraEstraiUrna
+from random import *
+from random import seed
 
+def ProceduraEstraiUrna(lurna):
+
+    somaPallineLista = sum(lurna) 
+
+    numCasuale = randint(1, somaPallineLista)
+
+    lunghezzaLista = len(lurna) 
+
+    ipartialLen = 0
+
+    for i in range(lunghezzaLista):
+
+        ipartialLen += lurna[i]
+
+        if numCasuale <= ipartialLen:
+
+            return i
 def CalcolaProbabilita(lurna,tentativi,leventi):
 
     fprobabilita = 0

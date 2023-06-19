@@ -1,0 +1,26 @@
+
+normale (mu sigma)
+
+poisson (lambda)
+
+unifomre (a,b)
+
+Chi quadro (gradi di libertà)
+
+
+
+Generare la distribuzione delle medie per un certo N (numerosità campionaria)
+
+Calcolare: 
+
+    - Istogramma 
+
+    - Curtosi 
+
+    - Simmetria
+
+    - intervalli di sqm
+
+
+
+
